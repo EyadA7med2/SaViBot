@@ -994,9 +994,11 @@ const zead = [
    `*** اهلا بك ! انا تائهه في هذا المكان  ***`,
    '*** هل تود مساعدتي ؟ ***',
    '*** لماذا هل انت قاسي القلب ؟ ***',
-   '*** انني اشفق عليك يجب ان تطهر روحك وتحب الخير للجميع ***',
+   '*** انني اشفق عليك عليك يجب ان تطهر روحك وتحب الخير للجميع ***',
    '*** ابتعد عني قليل انني متعبة ***',
-	 '*** هل انت نادم على ماقلت ؟ ***',
+   '*** هل انت نادم على ماقلت ؟ ***',
+   '*** ابتعد عني قليل انني متعبة ***',
+   '*** هل انت نادم على ماقلت ؟ ***',
    '*** هل تود مساعدتي ؟ ***',
    '*** واو اشكرك انك شخصاَ رائع ! ***',
    '*** ابحث معي عن منزلي لقد كان قريباَ من هنا ***',
@@ -1031,16 +1033,20 @@ const zead = [
    '*** مريم : اعلم انك هنا في المنزل ***',
    '*** مريم : ماذا تريد ان تسمع ***',
    '*** احد ما خرج من المنزل ***',
-   ]
-   if (message.content.startsWith('.مريم')) {
+   '*** انتظر الجزء الثاني عندما يوصل البوت 100 سيرفر , ساعدني في نشر البوت وادخل هذا السيرفر  ***'
+]
+ client.on('message', message => {
+ if (message.content.startsWith('Gمريم')) {
   var mariam= new Discord.RichEmbed()
   .setTitle("لعبة مريم ..")
   .setColor('RANDOM')
   .setDescription(`${zead[Math.floor(Math.random() * zead.length)]}`)
   .setImage("https://www.npa-ar.com/wp-content/uploads/2017/08/%D9%84%D8%B9%D8%A8%D8%A9-%D9%85%D8%B1%D9%8A%D9%85-300x200.jpg")
    message.channel.sendEmbed(mariam);
+   message.react("??")
   }
 });
+
 
 const Langs = ['afrikaans', 'albanian', 'amharic', 'arabic', 'armenian', 'azerbaijani', 'bangla', 'basque', 'belarusian', 'bengali', 'bosnian', 'bulgarian', 'burmese', 'catalan', 'cebuano', 'chichewa', 'chinese simplified', 'chinese traditional', 'corsican', 'croatian', 'czech', 'danish', 'dutch', 'english', 'esperanto', 'estonian', 'filipino', 'finnish', 'french', 'frisian', 'galician', 'georgian', 'german', 'greek', 'gujarati', 'haitian creole', 'hausa', 'hawaiian', 'hebrew', 'hindi', 'hmong', 'hungarian', 'icelandic', 'igbo', 'indonesian', 'irish', 'italian', 'japanese', 'javanese', 'kannada', 'kazakh', 'khmer', 'korean', 'kurdish (kurmanji)', 'kyrgyz', 'lao', 'latin', 'latvian', 'lithuanian', 'luxembourgish', 'macedonian', 'malagasy', 'malay', 'malayalam', 'maltese', 'maori', 'marathi', 'mongolian', 'myanmar (burmese)', 'nepali', 'norwegian', 'nyanja', 'pashto', 'persian', 'polish', 'portugese', 'punjabi', 'romanian', 'russian', 'samoan', 'scottish gaelic', 'serbian', 'sesotho', 'shona', 'sindhi', 'sinhala', 'slovak', 'slovenian', 'somali', 'spanish', 'sundanese', 'swahili', 'swedish', 'tajik', 'tamil', 'telugu', 'thai', 'turkish', 'ukrainian', 'urdu', 'uzbek', 'vietnamese', 'welsh', 'xhosa', 'yiddish', 'yoruba', 'zulu'];
 
